@@ -2,34 +2,29 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CheckoutPage {
-    private SelenideElement firstNameInput = $("#first-name");
-    private SelenideElement lastNameInput = $("#last-name");
-    private SelenideElement zipCodeInput = $("#postal-code");
-    private SelenideElement continueButton = $("#continue");
-    private SelenideElement finishButton = $("#finish");
+    private final SelenideElement firstNameInput = $("#first-name");
+    private final SelenideElement lastNameInput = $("#last-name");
+    private final SelenideElement zipCodeInput = $("#postal-code");
+    private final SelenideElement continueButton = $("#continue");
+    private final SelenideElement finishButton = $("#finish");
 
-    public CheckoutPage enterFirstName(String firstName) {
+    public void enterFirstName(String firstName) {
         firstNameInput.setValue(firstName);
-        return this;
     }
 
-    public CheckoutPage enterLastName(String lastName) {
+    public void enterLastName(String lastName) {
         lastNameInput.setValue(lastName);
-        return this;
     }
 
-    public CheckoutPage enterZipCode(String zipCode) {
+    public void enterZipCode(String zipCode) {
         zipCodeInput.setValue(zipCode);
-        return this;
     }
 
-    public CheckoutPage continueToNextStep() {
+    public void continueToNextStep() {
         continueButton.click();
-        return this;
     }
 
-    public CheckoutPage finishCheckout() {
+    public void finishCheckout() {
         finishButton.click();
-        return this;
     }
 }

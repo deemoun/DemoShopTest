@@ -6,6 +6,5 @@ public class CartPage {
 
     public void proceedToCheckout() {
         checkoutButton.click();
-        new CheckoutPage();
     }
 }

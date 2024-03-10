@@ -8,15 +8,13 @@ public class LoginPage {
     private final SelenideElement passwordInput = $("#password");
     private final SelenideElement loginButton = $("#login-button");
 
-    public LoginPage open() {
+    public void open() {
         Selenide.open("https://www.saucedemo.com");
-        return this;
     }
 
-    public ProductPage login(String username, String password) {
+    public void login(String username, String password) {
         usernameInput.setValue(username);
         passwordInput.setValue(password);
         loginButton.click();
-        return new ProductPage();
     }
 }
