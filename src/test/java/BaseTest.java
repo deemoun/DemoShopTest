@@ -6,6 +6,5 @@ public class BaseTest {
     @BeforeAll
     public static void setup() {
         Configuration.browser = "firefox";
-        Configuration.startMaximized = true;
     }
 }
